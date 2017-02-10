@@ -1,0 +1,45 @@
+// RESUME 
+
+.resume-style {
+	h2 {
+		font-weight: normal;
+		font-size: 30px;
+	}
+
+	.experience, .education, .projects, .misc {
+		padding-bottom : 20px;
+
+		h3 {
+			text-transform : uppercase;
+			color          : $teal;
+			font-size      : 12px;
+		}
+
+		.job, .project {
+			margin-bottom :20px;
+
+			&:last-child {
+				margin-bottom : 0;
+			}
+		}
+
+		.heading {
+			font-size : 18px;
+
+			strong, em {
+				@include respond-to("xsmall") {
+					display: block;
+				}
+			}
+		}
+		.duration {
+			padding-bottom : 10px;
+		}
+	}
+
+
+
+	.phone-and-email {
+		font-weight : bold;
+	}
+}

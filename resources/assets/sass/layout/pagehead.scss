@@ -1,0 +1,61 @@
+/* NAVIGATION */
+
+.navbar{
+
+	a {
+		color : #FFF;
+	}
+
+	.navbar-header {
+		text-transform : uppercase;
+
+		&.col-md-12 {
+			@include respond-to(small) {
+				width: 100%;
+			}
+		}
+
+		.navbar-brand {
+			font-weight : bold;
+
+			@include respond-to(xsmall) {
+				padding : 10px;
+			}
+
+			span {
+				font-weight : 300;
+				font-size   : 14px;
+				color       : rgba(255, 255, 255, 0.7);
+
+				@include respond-to(xsmall) {
+					display    : block;
+					margin-top : -6px;
+				}
+			}
+		}
+	}
+
+	.navbar-toggle {
+		display      : block;
+		margin-right : 0;
+		position     : relative;
+		height       : 34px;
+
+		.icon-bar {
+			background-color : #FFF;
+			transition       : all 0.2s;
+		}
+	}
+}
+
+.icon-bar {
+	&.rotate-bar-left {
+		transform     : rotate(45deg);
+		margin-bottom : 3px !important;
+	}
+
+	&.rotate-bar-right {
+		transform  : rotate(-45deg);
+		margin-top :-5px !important;
+	}
+}

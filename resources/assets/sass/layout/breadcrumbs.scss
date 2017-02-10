@@ -1,0 +1,25 @@
+/* BREADCRUMBS */
+ol.breadcrumb {
+	background-color : transparent;
+	padding          : 0;
+	text-transform   : uppercase;
+
+	>li+li:before {
+		content     : "\f054";
+		font-family : FontAwesome;
+		font-weight : normal;
+		color       : #000;
+		font-size   : 12px;
+		padding     : 0 10px;
+	}
+
+	a {
+		color       : #000;
+		font-weight : normal;
+	}
+
+	.active {
+		color       : $orange;
+		font-weight : bold;
+	}
+}

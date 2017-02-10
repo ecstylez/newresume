@@ -1,0 +1,39 @@
+/* FOOTER */
+
+footer {
+	background-color : #343637;
+	color            : #FFF; /* #6c6d6e; */
+	padding          : 30px 0;
+
+	strong {
+		color : #FFF;
+	}
+
+	.contact-information {
+		color : rgba(255, 255, 255, 0.5);
+
+		> span {
+			display       : block;
+			margin-bottom : 20px;
+
+			strong {
+				display : block;
+			}
+		}
+	}
+
+	article {
+		padding-bottom :20px;
+	}
+
+	.form-control {
+		background-color : #2d2f30;
+		border           : 1px solid rgba(255, 255, 255, 0.1);
+		color            : #6c6d6e;
+	}
+
+	.btn {
+		background-color : $orange;
+		color            : #FFF;
+	}
+}

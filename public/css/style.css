@@ -1,0 +1,653 @@
+/** base */
+/** VARIABLES */
+/* FONTS */
+@import 'https://fonts.googleapis.com/css?family=Montserrat:300,400,700|Raleway:300,400,600';
+/* DEFAULTS */
+body {
+  font-family: 'Raleway', sans-serif;
+  font-smoothing: antialiased;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Montserrat', sans-serif;
+}
+
+/* GENERAL */
+hgroup.section-header {
+  text-transform: uppercase;
+  color: #FFF;
+  text-align: center;
+}
+
+hgroup.section-header:after {
+  content: "";
+  position: relative;
+  width: 130px;
+  height: 3px;
+  display: block;
+  background-color: #0ab39a;
+  margin: 0 auto;
+  margin-bottom: 20px;
+}
+
+article {
+  padding-bottom: 10px;
+}
+
+article p {
+  line-height: 25px;
+  margin-bottom: 20px;
+}
+
+article p:last-child {
+  margin-bottom: 0;
+}
+
+/** mixins */
+/* RESPONSIVE */
+/* ANIMATIONS */
+@-webkit-keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.who-am-i h1 {
+  -webkit-animation: fadeIn ease-in 1;
+  animation: fadeIn ease-in 1;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+}
+
+/** layout */
+/* NAVIGATION */
+.navbar a {
+  color: #FFF;
+}
+
+.navbar .navbar-header {
+  text-transform: uppercase;
+}
+
+@media (min-width: 768px) {
+  .navbar .navbar-header.col-md-12 {
+    width: 100%;
+  }
+}
+
+.navbar .navbar-header .navbar-brand {
+  font-weight: bold;
+}
+
+@media (max-width: 424px) {
+  .navbar .navbar-header .navbar-brand {
+    padding: 10px;
+  }
+}
+
+.navbar .navbar-header .navbar-brand span {
+  font-weight: 300;
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+@media (max-width: 424px) {
+  .navbar .navbar-header .navbar-brand span {
+    display: block;
+    margin-top: -6px;
+  }
+}
+
+.navbar .navbar-toggle {
+  display: block;
+  margin-right: 0;
+  position: relative;
+  height: 34px;
+}
+
+.navbar .navbar-toggle .icon-bar {
+  background-color: #FFF;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+}
+
+.icon-bar.rotate-bar-left {
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+  margin-bottom: 3px !important;
+}
+
+.icon-bar.rotate-bar-right {
+  -webkit-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+  margin-top: -5px !important;
+}
+
+/* HOMEPAGE HEADER */
+.background-wrapper {
+  background-color: #0ab39a;
+  color: #FFF;
+}
+
+.background-wrapper.gradient-bg {
+  background: -webkit-linear-gradient(136deg, #0ab39a, #0ab39a, #8ca55b, #c96f37);
+  background: linear-gradient(314deg, #0ab39a, #0ab39a, #8ca55b, #c96f37);
+  background-size: 800% 800%;
+  -webkit-animation: AnimationName 15s ease infinite;
+  animation: AnimationName 15s ease infinite;
+}
+
+@-webkit-keyframes AnimationName {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+@keyframes AnimationName {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* HERO BANNER */
+.who-am-i {
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.who-am-i:after {
+  height: 0 !important;
+  display: none !important;
+}
+
+.who-am-i span {
+  font-size: 24px;
+  -webkit-animation: fadeIn ease-in 1;
+  animation: fadeIn ease-in 1;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+}
+
+.who-am-i h1 {
+  opacity: 0;
+  font-size: 54px;
+  -webkit-animation: fadeIn ease-in 1;
+  animation: fadeIn ease-in 1;
+  -webkit-animation-delay: 1.5s;
+  animation-delay: 1.5s;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+  -webkit-animation-duration: 1.5s;
+  animation-duration: 1.5s;
+}
+
+@media (max-width: 424px) {
+  .who-am-i h1 {
+    font-size: 44px;
+  }
+}
+
+.who-am-i h2 {
+  opacity: 0;
+  font-size: 24px;
+  font-family: 'Raleway';
+  font-weight: 300;
+  padding: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  -webkit-animation: fadeIn ease-in 1;
+  animation: fadeIn ease-in 1;
+  -webkit-animation-delay: 2s;
+  animation-delay: 2s;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+  -webkit-animation-duration: 2s;
+  animation-duration: 2s;
+}
+
+.who-am-i-container {
+  padding: 30px 0;
+}
+
+.who-am-i-container h1 {
+  margin: 0;
+  letter-spacing: -1px;
+  font-weight: bold;
+}
+
+.who-am-i-container h2 {
+  margin-top: 10px;
+}
+
+/* BREADCRUMBS */
+ol.breadcrumb {
+  background-color: transparent;
+  padding: 0;
+  text-transform: uppercase;
+}
+
+ol.breadcrumb > li + li:before {
+  content: "\f054";
+  font-family: FontAwesome;
+  font-weight: normal;
+  color: #000;
+  font-size: 12px;
+  padding: 0 10px;
+}
+
+ol.breadcrumb a {
+  color: #000;
+  font-weight: normal;
+}
+
+ol.breadcrumb .active {
+  color: #e07b3d;
+  font-weight: bold;
+}
+
+/* INTERIOR CONTENT */
+.interior-content {
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+.interior-content hgroup {
+  color: #000;
+}
+
+.interior-content hgroup.section-header:after {
+  background-color: #e07b3d;
+}
+
+.interior-content hgroup h1 {
+  font-size: 28px;
+}
+
+.interior-content hgroup h4 {
+  font-weight: normal;
+  font-family: 'Raleway', sans-serif;
+  font-size: 26px;
+}
+
+.interior-content hgroup h5 {
+  text-transform: uppercase;
+}
+
+.interior-content hgroup p {
+  line-height: 25px;
+}
+
+.interior-content a {
+  color: #e07b3d;
+  font-weight: bold;
+  text-decoration: none;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+.interior-content a:hover {
+  color: #e79969;
+}
+
+.skill-set-container p {
+  font-size: 12px;
+  line-height: 18px;
+}
+
+/* HIDDEN MENU */
+.hidden-menu {
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 1;
+  width: 250px;
+  color: #000;
+}
+
+.hidden-menu ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.hidden-menu .hidden-menu-section {
+  padding: 0 20px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+.hidden-menu .hidden-menu-links ul li a {
+  padding: 4px 20px;
+  display: block;
+  width: 100%;
+  color: rgba(0, 0, 0, 0.8);
+  text-decoration: none;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+}
+
+.hidden-menu .hidden-menu-links ul li a:hover {
+  background-color: rgba(224, 123, 61, 0.2);
+  padding-left: 30px;
+}
+
+.hidden-menu .hidden-menu-links ul li a span {
+  margin-right: 5px;
+}
+
+.menu-brand {
+  padding: 20px 0;
+  display: block;
+}
+
+.menu-brand span {
+  display: block;
+  text-transform: uppercase;
+  font-size: 14px;
+  color: rgba(0, 0, 0, 0.3);
+}
+
+.menu-brand span:first-child {
+  font-weight: bold;
+  font-size: 18px;
+  color: #000;
+}
+
+.canvas {
+  z-index: 3;
+  position: relative;
+  right: 0;
+  background-color: #FFF;
+  -webkit-transition: right 0.5s;
+  transition: right 0.5s;
+}
+
+.canvas.canvas-slid {
+  right: 250px;
+}
+
+.canvas.canvas-slid:after {
+  content: "";
+  position: absolute;
+  z-index: 2;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.menu-open {
+  z-index: 3;
+}
+
+/* FOOTER */
+footer {
+  background-color: #343637;
+  color: #FFF;
+  /* #6c6d6e; */
+  padding: 30px 0;
+}
+
+footer strong {
+  color: #FFF;
+}
+
+footer .contact-information {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+footer .contact-information > span {
+  display: block;
+  margin-bottom: 20px;
+}
+
+footer .contact-information > span strong {
+  display: block;
+}
+
+footer article {
+  padding-bottom: 20px;
+}
+
+footer .form-control {
+  background-color: #2d2f30;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: #6c6d6e;
+}
+
+footer .btn {
+  background-color: #e07b3d;
+  color: #FFF;
+}
+
+/** interiors */
+.resume-style h2 {
+  font-weight: normal;
+  font-size: 30px;
+}
+
+.resume-style .experience, .resume-style .education, .resume-style .projects, .resume-style .misc {
+  padding-bottom: 20px;
+}
+
+.resume-style .experience h3, .resume-style .education h3, .resume-style .projects h3, .resume-style .misc h3 {
+  text-transform: uppercase;
+  color: #0ab39a;
+  font-size: 12px;
+}
+
+.resume-style .experience .job, .resume-style .experience .project, .resume-style .education .job, .resume-style .education .project, .resume-style .projects .job, .resume-style .projects .project, .resume-style .misc .job, .resume-style .misc .project {
+  margin-bottom: 20px;
+}
+
+.resume-style .experience .job:last-child, .resume-style .experience .project:last-child, .resume-style .education .job:last-child, .resume-style .education .project:last-child, .resume-style .projects .job:last-child, .resume-style .projects .project:last-child, .resume-style .misc .job:last-child, .resume-style .misc .project:last-child {
+  margin-bottom: 0;
+}
+
+.resume-style .experience .heading, .resume-style .education .heading, .resume-style .projects .heading, .resume-style .misc .heading {
+  font-size: 18px;
+}
+
+@media (max-width: 424px) {
+  .resume-style .experience .heading strong, .resume-style .experience .heading em, .resume-style .education .heading strong, .resume-style .education .heading em, .resume-style .projects .heading strong, .resume-style .projects .heading em, .resume-style .misc .heading strong, .resume-style .misc .heading em {
+    display: block;
+  }
+}
+
+.resume-style .experience .duration, .resume-style .education .duration, .resume-style .projects .duration, .resume-style .misc .duration {
+  padding-bottom: 10px;
+}
+
+.resume-style .phone-and-email {
+  font-weight: bold;
+}
+
+.about-me-photo {
+  background-image: url(/images/about-me.jpg);
+  background-size: 120%;
+  background-position: center center;
+  height: 150px;
+  position: relative;
+  margin-bottom: 25px;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+.about-me-photo .curiousity {
+  padding: 20px;
+  overflow: hidden;
+}
+
+.about-me-photo .curiousity span {
+  color: #FFF;
+  z-index: 1;
+  position: relative;
+  display: block;
+  left: -1000px;
+  -webkit-transition: all 0.4s;
+  transition: all 0.4s;
+}
+
+.about-me-photo .curiousity span:first-child {
+  font-weight: bold;
+  font-size: 22px;
+  text-transform: uppercase;
+  margin-bottom: -8px;
+  left: 1000px;
+}
+
+.about-me-photo .curiousity:after {
+  content: "";
+  background: rgba(224, 123, 61, 0.8);
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 0;
+  opacity: 0;
+  -webkit-transition: opacity 0.2s;
+  transition: opacity 0.2s;
+}
+
+.about-me-photo:hover {
+  background-size: 140%;
+}
+
+.about-me-photo:hover .curiousity span {
+  left: 0;
+}
+
+.about-me-photo:hover .curiousity span:first-child {
+  right: 0;
+}
+
+.about-me-photo:hover .curiousity:after {
+  opacity: 1;
+}
+
+.about-me-skills hgroup h4 {
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 12px;
+  color: #0ab39a;
+}
+
+.about-me-skills ul li {
+  font-size: 12px;
+  padding-bottom: 5px;
+}
+
+.work {
+  height: 150px;
+  background: rgba(70, 70, 70, 0.65);
+  background-size: cover;
+  color: #FFF;
+  margin-bottom: 20px;
+  position: relative;
+  cursor: pointer;
+}
+
+.work:after {
+  background: #0ab39a;
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.work a {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  color: #FFF;
+  overflow: hidden;
+}
+
+.work a .title {
+  position: absolute;
+  padding: 20px;
+  font-size: 30px;
+  line-height: 30px;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-family: 'Montserrat', sans-serif;
+  letter-spacing: -1px;
+  width: 100%;
+  left: 0%;
+  z-index: 1;
+  -webkit-transition: left 0.3s;
+  transition: left 0.3s;
+}
+
+.work a .description {
+  position: absolute;
+  padding: 20px;
+  width: 100%;
+  left: -100%;
+  z-index: 1;
+  -webkit-transition: left 0.3s;
+  transition: left 0.3s;
+}
+
+.work a .bg-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  z-index: -1;
+}
+
+.work:hover a {
+  color: #FFF;
+}
+
+.work:hover .title {
+  left: 100%;
+}
+
+.work:hover .description {
+  left: 0;
+}
+
+.work:hover:after {
+  opacity: 1;
+}
+
+/*# sourceMappingURL=style.css.map */
