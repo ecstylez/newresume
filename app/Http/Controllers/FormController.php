@@ -22,7 +22,7 @@ class FormController extends Controller
 		), function($message) use ($request)
 		{
 			$message->from($request->get('email'));
-			$message->to('m.ecstylez@gmail.com', 'Mark Eccleston')->subject('Mark-Eccleston.com - form submission');
+			$message->to('admin@mark-eccleston-software-engineer.com', 'Mark Eccleston')->subject('Mark-Eccleston.com - form submission');
 		});
 
 		Session::flash('success', 'Thank you for submitting! I\'ll get back to you as soon as I can!');
