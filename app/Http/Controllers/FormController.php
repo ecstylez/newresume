@@ -21,7 +21,7 @@ class FormController extends Controller
 			'user_message' => $request->get('comments_and_questions')
 		), function($message) use ($request)
 		{
-			$message->from($request->get('email'));
+			$message->from('admin@mecorp.a2hosted.com');
 			$message->to('m.ecstylez@gmail.com', 'Mark Eccleston')->subject('Mark-Eccleston.com - form submission');
 		});
 
