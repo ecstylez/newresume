@@ -22,3 +22,5 @@
   ga('send', 'pageview');
 
 </script>
+<!-- recaptcha -->
+<script src='https://www.google.com/recaptcha/api.js'></script>

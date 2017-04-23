@@ -47,6 +47,7 @@
 						{!! Form::open(array(
 							'url'    => 'submit-form',
 							'method' => 'POST',
+							'id'     => 'submit-from',
 						))!!}
 							{!! Form::token() !!}
 							<div class="form-group">
@@ -71,6 +72,8 @@
 									)
 								) !!}
 							</div>
+							<div class="g-recaptcha" data-sitekey="{{ $_ENV['RE_CAP_SITE'] }}"></div>
+
 							<div class="text-right">
 								{!! Form::submit('Submit Inquiry', array(
 									'class' => 'btn',
